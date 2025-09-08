@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Pawfect Petcare</title>
+    <!-- Materialize CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Galindo&display=swap" rel="stylesheet">
+    <style>
+      .hero {
+      background: url('https://i.imgur.com/BWP9Xub.jpeg') center center / cover no-repeat;
+      height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+      padding: 2rem;
+      }
+      .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.35);
+      }
+      .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1000px;
+      width: 100%;
+      }
+      .hero h1 {
+      font-weight: 700;
+      font-size: 3.5rem;
+      color: #ffeb3b;
+      margin-bottom: 1.5rem;
+      }
+      .galindo-regular {
+      font-family: "Galindo", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      }
+      .mission-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      }
+      .mission-text {
+      flex: 1 1 60%;
+      text-align: left;
+      }
+      .mission-text blockquote {
+      border-left: none;
+      font-size: 1.2rem;
+      font-style: italic;
+      color: #fffde7;
+      margin: 0;
+      }
+      .mission-button {
+      flex: 1 1 30%;
+      text-align: right;
+      }
+      main {
+      margin: 1.5rem auto;
+      max-width: 1100px;
+      padding: 0 1rem;
+      }
+      footer {
+      padding: 1rem;
+      }
+      /* Socials row */
+      .social-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      }
+      .social-icons {
+      flex: 1 1 auto;
+      }
+      .social-icons p {
+      display: flex;
+      align-items: center;
+      font-size: 1.1rem;
+      }
+      .social-icons i {
+      margin-right: 8px;
+      color: #fbc02d;
+      }
+      .paw-graphic {
+      flex: 0 1 auto;
+      }
+      .paw-trail-svg {
+      width: 260px;
+      height: auto;
+      color: #fbc02d;
+      display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1 style="font-family: galindo">Pawfect Petcare</style></h1>
+        <div class="mission-row">
+          <div class="mission-text">
+            <blockquote>
+              “My mission is to provide a comforting and safe space for each animal I encounter. I want to provide essential care and the individual needs for every animal. I promise to enrich the lives of your beloved pets with each encounter, with all the love in me.”
+            </blockquote>
+          </div>
+          <div class="mission-button">
+            <a href="/about" class="btn yellow darken-2 black-text">More Info</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Main Content -->
+    <main class="container">
+      <br>
+      <div class="row">
+        <!-- Animals Included -->
+        <div class="col s12 m6">
+          <h5><strong>Animals Included</strong></h5>
+          <p>
+            Dogs (all breeds, large or small), cats (all breeds), reptiles, birds, and small animals 
+            (ferrets, rabbits, hamsters).
+          </p>
+          <p>Feel free to reach out to me for other pets you may need to be cared for that are not listed above!</p>
+        </div>
+        <!-- Needs Provided -->
+        <div class="col s12 m6">
+          <h5><strong>Needs Provided</strong></h5>
+          <ul class="collection">
+            <li class="collection-item">Exercise & Playtime</li>
+            <li class="collection-item">Walks</li>
+            <li class="collection-item">Mental & Physical Stimulation</li>
+            <li class="collection-item">Feeding</li>
+            <li class="collection-item">Bathing</li>
+            <li class="collection-item">Overnight Stays</li>
+          </ul>
+        </div>
+      </div>
+      <!-- Contact Section -->
+      <div class="section">
+        <h5><strong>Contact Us</strong></h5>
+        <p>
+          For inquiries regarding pet service, please email 
+          <a href="mailto:coral@pawfectpetcare.llc">coral@pawfectpetcare.llc</a>
+          .
+        </p>
+        <ul>
+          <li>Rates vary by each individual inquiry and visit.</li>
+          <li>Deposit may be required.</li>
+        </ul>
+      </div>
+      <!-- Social Media -->
+      <div class="section social-row">
+        <div class="social-icons">
+          <h5><strong>Follow our Social Medias!</strong></h5>
+          <p><i class="material-icons">photo_camera</i> Instagram: <strong>@pawfect_petcare757</strong></p>
+          <p><i class="material-icons">facebook</i> Facebook: <strong> Pawfect Petcare</strong></p>
+        </div>
+        <div class="paw-graphic">
+          <img src="https://i.imgur.com/XsWRGXW.jpeg" height="200vh" width="185vh"/>
+        </div>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer class="page-footer grey darken-3">
+      <div class="container center-align">
+        <p class="white-text">© 2025 Pawfect Petcare LLC.</p>
+      </div>
+    </footer>
+    <!-- Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </body>
+</html>
