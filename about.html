@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pawfect Petcare | About</title>
+  <!-- Materialize CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Galindo&display=swap" rel="stylesheet">
+  <style>
+    .hero {
+      background: url('https://i.imgur.com/BWP9Xub.jpeg') center center / cover no-repeat;
+      height: 35vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.4);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    .hero h1 {
+      font-weight: 700;
+      font-size: 3rem;
+      color: #ffeb3b;
+    }
+    main {
+      margin: 2rem auto;
+      max-width: 1100px;
+      padding: 0 1rem;
+    }
+    /* Gallery grid */
+    .gallery {
+      column-count: 3;
+      column-gap: 1rem;
+    }
+    .gallery-item {
+      break-inside: avoid;
+      margin-bottom: 1rem;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+    @media (max-width: 992px) {
+      .gallery { column-count: 2; }
+    }
+    @media (max-width: 600px) {
+      .gallery { column-count: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 style="font-family: galindo">What makes me a Pawfect choice?</h1>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="container">
+    <div class="row">
+      <!-- About Me -->
+      <div>
+        <h4 style="font-family: galindo"><strong>About Me</strong></h4>
+        <p>
+        Throughout my life, I have been around many different animals- from dogs and cats, birds, reptiles, hamsters, gerbils, guinea pigs, and to ferrets, just naming a few! Currently, I have a big-headed pitbull named Bruce Banner, and a bearded dragon named Swayze.
+        </p>
+        <p>
+        Growing up, I had started my own business at the age of 12 walking dogs. Many asked me why I wanted to do that at such an early age; my response was never because of the money, or because I was made to do so- it was because I had a passion for being around animals. I didn't feel capable of much being so young and inexperienced, but I made fliers and put them up in my neighborhood community billboard.
+        </p>
+        <p>
+        I didn't think anyone would give me a chance, being so young and with handling someone else's pet, but I was wrong! A kind couple hired me! They had told me they had a miniature schnauzer, had worked a lot, and needed someone to walk their dog. I quickly took that opportunity, and it changed my entire perspective on animals.
+        </p>
+        <p>
+        I had some knowledge on her breed and her personality because my family had a schnauzer as well, but it became much more than that. She was my first eye opening experience to realizing that every animal has very distinct and different personalities. Avery, the miniature schnauzer, was my client for 2 years before I had to move away. After Avery, my new neighbors hired me to take care of their chihuahua, Rottweiler, and Yorkshire terrier. This was a new challenge to me having 3 dogs at a time, but I was successful. Everyday, I let the dogs out, played with them for an hour, and fed them. 
+        <p>While having these 3 clients, I then got hired by someone to walk a Bully. I then had 4 different animals that I took care of. I had my daily routine for how I handled each client and their pets needs. I took care of all 4 of those dogs for 2 years. Unfortunately, I had to put a hold into my dog care business entering high school, and dedicating my time to marching band. Having this business experience taught me a lot of what I know on my animal care knowledge and helped me develop into who I am today. 
+        </p>
+        <p>
+          Outside of my business, I have also taken care of many different animals for friends, family, and friends of family. Each experience teaches me something new, and I wish to grow and expand my knowledge everyday. I believe that just like people, animals have their own personalities and feelings too. I want to help make a difference in animal care. I want to continue my business that I had started as a kid, but with a much bigger perspective and with much more experience and knowledge. My business may have stopped due to school and extra curricular activities, but my passion for animals continues to grow everyday. 
+        </p>
+          <p>
+            I want to go into how much I will love your pets, but I will just let my work speak for itself!
+          </p>
+        </p>
+        <p style="font-family: galindo">
+        -Coral B.,
+        Pawfect Petcare
+        </p>
+      </div>
+      <!-- My Goals -->
+      <div class="col s12 m6">
+        <h4 style="font-family: galindo"><strong>My Goals</strong></h4>
+        <p>
+          <li>To provide a safe space for your pet</li>
+          <li>To provide essential care for your pet</li>
+          <li>To provide love!</li>
+        </p>
+      </div>
+      <div class="col s12 m6">
+      <h4 style="font-family: galindo"><strong>My Mission</strong></h4>
+      <p>
+      My mission is to provide a comforting and safe space for each animal I encounter. I want to provide essential care and the individual needs for every animal. I promise to enrich the lives of your beloved pets with each encounter, with all the love in me.
+      </p>
+    </div>
+    </div>
+
+    <!-- Gallery -->
+    <div class="section">
+      <h4 style="font-family: galindo"><strong>Gallery</strong></h4>
+      <div class="gallery">
+        <!-- Up to 12 images -->
+        <div class="gallery-item"><img src="https://i.imgur.com/8jumP6y.jpeg"></div>
+        <div class="gallery-item"><img src="https://i.imgur.com/h3iNiPm.jpeg"></div>
+        <div class="gallery-item"><img src="https://i.imgur.com/8jjJT1k.jpeg"></div>
+        <div class="gallery-item"><img src="https://i.imgur.com/5sxFU5P.jpeg"></div>
+        <div class="gallery-item"><img src="https://i.imgur.com/3oK8KJR.png"></div>
+        <div class="gallery-item"><img src="https://i.imgur.com/y77Eyrl.jpeg"></div>
+        <div class="gallery-item"><img src="https://i.imgur.com/RtKFFzr.jpeg"></div>
+        <div class="gallery-item"><img src="https://i.imgur.com/3iUZJAm.jpeg"></div>
+      </div>
+      <br>
+      <h4 style="font-family: galindo"><strong>Bookings</strong></h4>
+      <p>Want to book your Pawfect care?</p>
+      <blockquote>For inquiries regarding pet service, please email <a href="mailto:coral@pawfectpetcare.llc">coral@pawfectpetcare.llc</a>.
+      <li>Rates vary by each individual query and visit.</li>
+      <li>Deposits may be required.</li>
+      </blockquote>
+      <div class="mission-button">
+      <a href="/" class="btn yellow darken-2 black-text">Back to Home</a>
+    </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="page-footer grey darken-3">
+    <div class="container center-align">
+      <p class="white-text">© 2025 Pawfect Petcare LLC</p>
+    </div>
+  </footer>
+
+  <!-- Materialize JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
