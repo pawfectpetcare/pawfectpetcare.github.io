@@ -145,13 +145,43 @@
         <!-- Needs Provided -->
         <div class="col s12 m6">
           <h4 style="font-family: galindo"><strong>Needs Provided</strong></h4>
-          <ul class="collection">
-            <li class="collection-item">Exercise & Playtime</li>
-            <li class="collection-item">Walks</li>
-            <li class="collection-item">Mental & Physical Stimulation</li>
-            <li class="collection-item">Feeding</li>
-            <li class="collection-item">Bathing</li>
-            <li class="collection-item">Overnight Stays</li>
+          <ul class="collapsible expandable">
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">expand_more</i>Exercise & Playtime
+              </div>
+              <div class="collapsible-body"><span>Engaging activities tailored to your pet’s energy level to keep them active and happy.</span></div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">expand_more</i>Walks
+              </div>
+              <div class="collapsible-body"><span>Regular walks to ensure your dog gets fresh air, exploration, and daily exercise.</span></div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">expand_more</i>Mental & Physical Stimulation
+              </div>
+              <div class="collapsible-body"><span>Interactive games and enrichment activities to challenge your pet’s mind and body.</span></div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">expand_more</i>Feeding
+              </div>
+              <div class="collapsible-body"><span>Meal preparation and feeding according to your pet’s dietary schedule and needs.</span></div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">expand_more</i>Bathing
+              </div>
+              <div class="collapsible-body"><span>Gentle cleaning sessions to keep your pets fresh and comfortable.</span></div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">expand_more</i>Overnight Stays
+              </div>
+              <div class="collapsible-body"><span>Reliable overnight care so your pets feel secure and loved even while you’re away.</span></div>
+            </li>
           </ul>
         </div>
       </div>
@@ -187,5 +217,26 @@
     </footer>
     <!-- Materialize JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Accordion -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.collapsible.expandable');
+        M.Collapsible.init(elems, {
+          accordion: false
+        });
+
+        document.querySelectorAll('.collapsible-header').forEach(header => {
+          header.addEventListener('click', function() {
+            const icon = this.querySelector('.material-icons');
+            const parent = this.parentElement;
+            if (parent.classList.contains('active')) {
+              icon.textContent = 'expand_less';
+            } else {
+              icon.textContent = 'expand_more';
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>
