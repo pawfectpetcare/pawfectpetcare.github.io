@@ -20,110 +20,144 @@
     <link href="https://fonts.googleapis.com/css2?family=Galindo&display=swap" rel="stylesheet">
     <style>
       .hero {
-      background: url('https://i.imgur.com/BWP9Xub.jpeg') center center / cover no-repeat;
-      height: 50vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-      position: relative;
-      padding: 2rem;
+        background: url('https://i.imgur.com/BWP9Xub.jpeg') center center / cover no-repeat;
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        position: relative;
+        padding: 2rem;
       }
       .hero::after {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.35);
+        content: "";
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: rgba(0,0,0,0.35);
       }
       .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 1000px;
-      width: 100%;
+        position: relative;
+        z-index: 2;
+        max-width: 1000px;
+        width: 100%;
       }
       .hero h1 {
-      font-weight: 700;
-      font-size: 3.5rem;
-      color: #ffeb3b;
-      margin-bottom: 1.5rem;
+        font-weight: 700;
+        font-size: 3.5rem;
+        color: #ffeb3b;
+        margin-bottom: 1.5rem;
       }
       .galindo-regular {
-      font-family: "Galindo", sans-serif;
-      font-weight: 400;
-      font-style: normal;
+        font-family: "Galindo", sans-serif;
       }
       .mission-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
       }
-      .mission-text {
-      flex: 1 1 60%;
-      text-align: left;
-      }
+      .mission-text { flex: 1 1 60%; text-align: left; }
       .mission-text blockquote {
-      border-left: none;
-      font-size: 1.2rem;
-      font-style: italic;
-      color: #fffde7;
-      margin: 0;
+        border-left: none;
+        font-size: 1.2rem;
+        font-style: italic;
+        color: #fffde7;
+        margin: 0;
       }
-      .mission-button {
-      flex: 1 1 30%;
-      text-align: right;
-      }
+      .mission-button { flex: 1 1 30%; text-align: right; }
       main {
-      margin: 1.5rem auto;
-      max-width: 1100px;
-      padding: 0 1rem;
+        margin: 1.5rem auto;
+        max-width: 1100px;
+        padding: 0 1rem;
       }
-      footer {
-      padding: 1rem;
-      }
-      /* Socials row */
+      footer { padding: 1rem; }
       .social-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
       }
-      .social-icons {
-      flex: 1 1 auto;
-      }
+      .social-icons { flex: 1 1 auto; }
       .social-icons p {
-      display: flex;
-      align-items: center;
-      font-size: 1.1rem;
+        display: flex;
+        align-items: center;
+        font-size: 1.1rem;
       }
-      .social-icons i {
-      margin-right: 8px;
-      color: #fbc02d;
+      .social-icons i { margin-right: 8px; color: #fbc02d; }
+      .paw-graphic { flex: 0 1 auto; }
+      .services-block { text-indent: 40px; }
+      blockquote { border-left: 5px solid gold; }
+
+      /* Gallery grid */
+      .gallery {
+        column-count: 4;
+        column-gap: 1rem;
       }
-      .paw-graphic {
-      flex: 0 1 auto;
+      .gallery-item {
+        break-inside: avoid;
+        margin-bottom: 1rem;
+        overflow: hidden;
+        border-radius: 5px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
       }
-      .paw-trail-svg {
-      width: 260px;
-      height: auto;
-      color: #fbc02d;
-      display: block;
+      .gallery-item img {
+        width: 100%;
+        height: auto;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        display: block;
+        object-fit: cover;
       }
-      .services-block {
-      text-indent: 40px;
+      @media (max-width: 992px) { .gallery { column-count: 2; } }
+      @media (max-width: 600px) { .gallery { column-count: 1; } }
+
+      /* Carousel */
+      .carousel-container {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
       }
-      blockquote {
-        border-left: 5px solid gold
+      .carousel-track {
+        display: flex;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
       }
-}
+      .carousel-track .card {
+        flex: 0 0 calc(25% - 20px);
+        margin: 0 10px;
+      }
+      @media (max-width: 992px) {
+        .carousel-track .card { flex: 0 0 calc(33.333% - 20px); }
+      }
+      @media (max-width: 600px) {
+        .carousel-track .card { flex: 0 0 calc(100% - 20px); }
+      }
+      .card img {
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+      }
+      .carousel-btn {
+        position: absolute;
+        top: 40%;
+        transform: translateY(-50%);
+        background: rgba(255,255,255,0.9);
+        border: none;
+        cursor: pointer;
+        z-index: 5;
+        padding: 8px 12px;
+        border-radius: 50%;
+      }
+      .carousel-btn.left { left: 10px; }
+      .carousel-btn.right { right: 10px; }
     </style>
   </head>
   <body>
     <!-- Hero Section -->
     <section class="hero">
       <div class="hero-content">
-        <h1 style="font-family: galindo">Pawfect Petcare</style></h1>
+        <h1 style="font-family: galindo">Pawfect Petcare</h1>
         <div class="mission-row">
           <div class="mission-text">
             <blockquote>
@@ -136,132 +170,160 @@
         </div>
       </div>
     </section>
+
     <!-- Main Content -->
     <main class="container">
       <br>
       <div class="row">
+      <!-- Areas Served -->
+      <div class="section">
+        <h4 style="font-family: galindo"><strong>Areas Served</strong></h4>
+        <p>We serve <b>most</b> of the 757 Hampton Roads/Tidewater region!</p>
+        <blockquote>Not sure if we cover your area? Send us an email!</blockquote>
+        <div class="carousel-container" id="carouselWrapper">
+          <button class="carousel-btn left" onclick="scrollCarousel(-1)">
+            <i class="material-icons">chevron_left</i>
+          </button>
+          <div class="carousel-track" id="cardCarousel">
+            <div class="card"><div class="card-image"><img src="https://i.imgur.com/mEa4PR7.png" draggable="false" alt="Virginia Beach"></div><div class="card-content"><span class="card-title">Virginia Beach</span><b>Areas Served:</b><li type="circle">Entire Region!</li></div></div>
+            <div class="card"><div class="card-image"><img src="https://i.imgur.com/M6eCF4v.png" draggable="false" alt="Norfolk"></div><div class="card-content"><span class="card-title">Norfolk</span><b>Areas Served:</b><li type="circle">Entire Region!</li></div></div>
+            <div class="card"><div class="card-image"><img src="https://i.imgur.com/M6eCF4v.png" draggable="false" alt="Chesapeake"></div><div class="card-content"><span class="card-title">Chesapeake</span><b>Areas Served:</b><li type="circle">Entire Region!</li></div></div>
+            <div class="card"><div class="card-image"><img src="https://i.imgur.com/VI6Nx8y.png" draggable="false" alt="Portsmouth"></div><div class="card-content"><span class="card-title">Portsmouth</span><b>Areas Served:</b><li type="circle">Entire Region!</li></div></div>
+            <div class="card"><div class="card-image"><img src="https://i.imgur.com/PiVfIO0.png" draggable="false" alt="Suffolk"></div><div class="card-content"><span class="card-title">Suffolk</span><b>Areas Served:</b><li type="circle">Certain Areas.</li></div></div>
+          </div>
+          <button class="carousel-btn right" onclick="scrollCarousel(1)">
+            <i class="material-icons">chevron_right</i>
+          </button>
+        </div>
+      </div>
         <!-- Animals Included -->
         <div class="col s12 m6">
           <h4 style="font-family: galindo"><strong>Animals Included</strong></h4>
-          <p>
-            Dogs (all breeds, large or small), cats (all breeds), reptiles, birds, and small animals 
+          <p>Dogs (all breeds, large or small), cats (all breeds), reptiles, birds, and small animals 
             (ferrets, rabbits, hamsters).
           </p>
           <p>Feel free to reach out to me for other pets you may need to be cared for that are not listed above!</p>
         </div>
+
         <!-- Needs Provided -->
         <div class="col s12 m6">
           <h4 style="font-family: galindo"><strong>Needs Provided</strong></h4>
           <ul class="collapsible expandable">
-            <li>
-              <div class="collapsible-header">
-                <i class="material-icons">expand_more</i>Exercise & Playtime
-              </div>
-              <div class="collapsible-body"><span>Engaging activities tailored to your pet's energy level to keep them active and happy.</span></div>
+            <li><div class="collapsible-header"><i class="material-icons">expand_more</i>Exercise & Playtime</div>
+              <div class="collapsible-body"><span>Engaging activities tailored to your pet's energy level.</span></div>
             </li>
-            <li>
-              <div class="collapsible-header">
-                <i class="material-icons">expand_more</i>Walks
-              </div>
-              <div class="collapsible-body"><span>Regular walks to ensure your dog gets fresh air, exploration, and daily exercise.</span></div>
+            <li><div class="collapsible-header"><i class="material-icons">expand_more</i>Walks</div>
+              <div class="collapsible-body"><span>Regular walks for fresh air, exploration, and exercise.</span></div>
             </li>
-            <li>
-              <div class="collapsible-header">
-                <i class="material-icons">expand_more</i>Mental & Physical Stimulation
-              </div>
-              <div class="collapsible-body"><span>Enrichment activities to challenge your pet’s mind and body, as well as playtime!</span></div>
+            <li><div class="collapsible-header"><i class="material-icons">expand_more</i>Mental & Physical Stimulation</div>
+              <div class="collapsible-body"><span>Enrichment activities to challenge your pet’s mind and body.</span></div>
             </li>
-            <li>
-              <div class="collapsible-header">
-                <i class="material-icons">expand_more</i>Feeding
-              </div>
-              <div class="collapsible-body"><span>Meal preparation and feeding according to your pet’s dietary schedule and needs.</span></div>
+            <li><div class="collapsible-header"><i class="material-icons">expand_more</i>Feeding</div>
+              <div class="collapsible-body"><span>Meal prep and feeding according to schedule and needs.</span></div>
             </li>
-            <li>
-              <div class="collapsible-header">
-                <i class="material-icons">expand_more</i>Bathing
-              </div>
-              <div class="collapsible-body"><span>Gentle cleaning sessions to keep your pets fresh, clean and comfortable.</span></div>
+            <li><div class="collapsible-header"><i class="material-icons">expand_more</i>Bathing</div>
+              <div class="collapsible-body"><span>Gentle cleaning sessions to keep pets fresh and comfortable.</span></div>
             </li>
-            <li>
-              <div class="collapsible-header">
-                <i class="material-icons">expand_more</i>Overnight Stays
-              </div>
-              <div class="collapsible-body"><span>Reliable overnight care so your pets feel secure and loved, even while you’re away.</span></div>
+            <li><div class="collapsible-header"><i class="material-icons">expand_more</i>Overnight Stays</div>
+              <div class="collapsible-body"><span>Reliable overnight care so pets feel secure and loved.</span></div>
             </li>
           </ul>
         </div>
       </div>
+
       <!-- Contact Section -->
       <div class="section">
         <h4 style="font-family: galindo"><strong>Contact Us</strong></h4>
         <h6 style="font-family: galindo"><i>Want to book Pawfect care for your pet?</i></h6>
         <blockquote>For inquiries, questions, or comments regarding pet service, please email <a href="mailto:bruceandswayze@gmail.com">bruceandswayze@gmail.com</a>.
-          <li type="circle">Please include the following in your email: <li class="services-block" type="circle"><b>Your Name</b>
-           <li class="services-block" type="circle"><b>Contact Number</b>
-            <li class="services-block" type="circle"> <b>Pet(s) Information</b>
-              <li class="services-block" type="circle"> <b>Hours of Service Requested</b>
-                <li class="services-block" type="circle"><b>Type of Services Requested</b>
-                  <li class="services-block" type="circle"><b>City</b>
-                  </li>
-                </li>
-              </li>
-            </li>
-          </li>
-        </li>This is important for scheduling or quotes.</li>
+          <li type="circle">Please include the following in your email: </li>
+          <li class="services-block" type="circle"><b>Your Name</b></li>
+          <li class="services-block" type="circle"><b>Contact Number</b></li>
+          <li class="services-block" type="circle"> <b>Pet(s) Information</b></li>
+          <li class="services-block" type="circle"> <b>Hours of Service Requested</b></li>
+          <li class="services-block" type="circle"><b>Type of Services Requested</b></li>
+          <li class="services-block" type="circle"><b>City</b></li>
+          <li>This is important for scheduling or quotes.</li>
           <br>
-        <li>Rates vary by each individual query and visit.</li>
-        <li>Deposits may be required.</li>
+          <hr>
+          <p>Rates vary by each individual query and visit. Deposits may be required.</p>
         </blockquote>
         </div>
+
       <!-- Certifications -->
       <div class="section social-row">
         <h4 style="font-family: galindo"><strong>Certifications</strong></h4>
         <p>I am Red Cross certified in <b>Cat</b> & <b>Dog</b> First Aid!</p>
-          <div class="paw-graphic">
-            <img draggable="false" src="https://i.imgur.com/WP7jeld.png" height="250vh" width="400vh"/>
-          </div>
-        </div>
+        <div class="paw-graphic"><img src="https://i.imgur.com/WP7jeld.png" height="250" width="400"/></div>
+      </div>
+
       <!-- Social Media -->
       <div class="section social-row">
         <div class="social-icons">
           <h4 style="font-family: galindo"><strong>Follow our Social Medias!</strong></h4>
-          <p><i class="material-icons">photo_camera</i>⠀Instagram: <strong>ㅤ<a href="https://www.instagram.com/pawfect_petcare757/">@pawfect_petcare757</a></strong></p>
-          <p><i class="material-icons">facebook</i>⠀Facebook: <strong>ㅤ<a href="https://www.facebook.com/profile.php?id=61579932400643">Pawfect Petcare 757</a></strong></p>
+          <p><i class="material-icons">photo_camera</i>⠀Instagram: <strong><a href="https://www.instagram.com/pawfect_petcare757/">⠀@pawfect_petcare757</a></strong></p>
+          <p><i class="material-icons">facebook</i>⠀Facebook: <strong><a href="https://www.facebook.com/profile.php?id=61579932400643">⠀Pawfect Petcare 757</a></strong></p>
         </div>
-        <div class="paw-graphic">
-          <img src="https://i.imgur.com/XsWRGXW.jpeg" height="200vh" width="185vh"/>
-        </div>
+        <div class="paw-graphic"><img src="https://i.imgur.com/XsWRGXW.jpeg" height="200" width="185"/></div>
       </div>
     </main>
+
     <!-- Footer -->
     <footer class="page-footer grey darken-3">
       <div class="container center-align">
         <p class="white-text">© 2025 Pawfect Petcare LLC.</p>
       </div>
     </footer>
+
     <!-- Materialize JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <!-- Accordion -->
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         var elems = document.querySelectorAll('.collapsible.expandable');
-        M.Collapsible.init(elems, {
-          accordion: false
-        });
+        M.Collapsible.init(elems, { accordion: false });
 
         document.querySelectorAll('.collapsible-header').forEach(header => {
           header.addEventListener('click', function() {
             const icon = this.querySelector('.material-icons');
             const parent = this.parentElement;
-            if (parent.classList.contains('active')) {
-              icon.textContent = 'expand_less';
-            } else {
-              icon.textContent = 'expand_more';
-            }
+            icon.textContent = parent.classList.contains('active') ? 'expand_less' : 'expand_more';
           });
         });
       });
+
+      const track = document.getElementById("cardCarousel");
+      const wrapper = document.getElementById("carouselWrapper");
+      let scrollAmount = 0;
+      let autoScroll;
+
+      function scrollCarousel(direction) {
+        const card = track.querySelector(".card");
+        const cardStyle = window.getComputedStyle(card);
+        const cardWidth = card.offsetWidth + parseInt(cardStyle.marginLeft) + parseInt(cardStyle.marginRight);
+
+        scrollAmount += direction * cardWidth * 3;
+        if (scrollAmount < 0) scrollAmount = 0;
+        if (scrollAmount > track.scrollWidth - track.clientWidth) {
+          scrollAmount = track.scrollWidth - track.clientWidth;
+        }
+        track.scrollTo({ left: scrollAmount, behavior: "smooth" });
+      }
+
+      function startAutoScroll() {
+        autoScroll = setInterval(() => {
+          if (scrollAmount >= track.scrollWidth - track.clientWidth) {
+            scrollAmount = 0;
+          } else {
+            scrollCarousel(1);
+          }
+        }, 5000);
+      }
+      function stopAutoScroll() { clearInterval(autoScroll); }
+
+      wrapper.addEventListener("mouseenter", stopAutoScroll);
+      wrapper.addEventListener("mouseleave", startAutoScroll);
+
+      startAutoScroll();
     </script>
   </body>
 </html>
